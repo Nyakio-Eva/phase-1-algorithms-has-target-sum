@@ -1,6 +1,18 @@
-function hasTargetSum(array, target) {
+function hasTargetSum(arr, target) {
   // Write your algorithm here
+  for(let i=0; i< arr.length-1; i++){
+    for(let j=i+1; j<arr.length; j++){
+      if(arr[i] + arr[j] === target){
+        return true;
+      }
+    }
+  }
+  return false;
+
 }
+let arr = [3,8,12,4,11,7];
+let target = [10];
+console.log(hasTargetSum(arr,target));
 
 /* 
   Write the Big O time complexity of your function here
